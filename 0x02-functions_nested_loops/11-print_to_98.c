@@ -1,51 +1,22 @@
 #include "main.h"
 
 /**
- * print_times_table - Prints a multiplication table up to param
- * @n: The number to be treated
- *
- *  Return: Number matrix
+ * print_to_98 - Prints all natural numbers from n to 98,
+ * in order separated by a comma followed by a space.
+ * @n: The number to begin.
  */
-void print_times_table(int n)
+void print_to_98(int n)
 {
-	int x, y, z;
-
-	if (n >= 0 && n <= 14)
+	if (n >= 98)
 	{
-		for (x = 0; x <= n; x++)
-		{
-			for (y = 0; y <= n; y++)
-			{
-				z = x * y;
-				if (z > 99)
-				{
-					_putchar(',');
-					_putchar(32);
-					_putchar((z / 100) + '0');
-					_putchar(((z / 10) % 10) + '0');
-					_putchar((z % 10) + '0');
-				}
-				else if (z > 9)
-				{
-					_putchar(',');
-					_putchar(32);
-					_putchar(32);
-					_putchar(((z / 10) % 10) + '0');
-					_putchar((z % 10) + '0');
-				}
-				else
-				{
-					if (y != 0)
-					{
-						_putchar(',');
-						_putchar(32);
-						_putchar(32);
-						_putchar(32);
-					}
-					_putchar(z + '0');
-				}
-			}
-			_putchar('\n');
-		}
+		while (n > 98)
+			printf("%d, ", n--);
+		printf("%d\n", n);
+	}
+	else
+	{
+		while (n < 98)
+			printf("%d, ", n++);
+		printf("%d\n", n);
 	}
 }
