@@ -10,6 +10,7 @@ void times_table(void)
 
 	for (row = 0; row < 10; row++)
 	{
+		column = 0;
 		product = row * column;
 		if (column == 0)
 		{
