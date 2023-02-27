@@ -14,7 +14,7 @@ void rev_string(char *s)
 	/* find the length of the string */
 	while (*(s + len) != '\0')
 	{
-		len++
+		len++;
 	}
 
 	/* swap characters from both ends of the string */
